@@ -12,10 +12,13 @@
   <nav>
     <div class="logo"><span></span>FF-Herman</div>
     <button id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    <button id="theme-toggle" aria-label="Changer de thème">🌙</button>
     <ul>
       <li><a href="#apropos">A PROPOS</a></li>
       <li><a href="#competences">COMPETENCES</a></li>
+      <li><a href="#portfolio">PORTFOLIO</a></li>
       <li><a href="#parcours">PARCOURS</a></li>
+      <li><a href="#blog">BLOG</a></li>
       <li><a href="#contact">CONTACT</a></li>
     </ul>
   </nav>
@@ -23,7 +26,7 @@
   <header>
     <p>DEVELOPPEUR WEB - ETUDIANT EN INFORMATIQUE</p>
     <h1><strong>FOKOU</strong><br><em>FRANCK</em> <em>HERMAN</em></h1>
-    <p>Passionné par la création d'expériences Web modernes et accessibles. En route vers le développement front-end.</p>
+    <p id="welcome-text">Passionné par la création d'expériences Web modernes et accessibles. En route vers le développement front-end.</p>
     <a class="btn" href="https://wa.me/237698438389">ME CONTACTER</a>
     <img src="moii.jpeg" alt="Photo de profil">
   </header>
@@ -38,6 +41,7 @@
         <p>3+ technologies maîtrisées</p>
         <p>Envie d'apprendre</p>
       </div>
+      <a class="btn" href="cv.pdf" download>TÉLÉCHARGER MON CV</a>
     </section>
 
     <section id="competences">
@@ -47,18 +51,41 @@
         <article>
           <h3>HTML & CSS</h3>
           <p>Structure sémantique, responsive design, accessibilité.</p>
+          <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
         </article>
         <article>
           <h3>JavaScript</h3>
           <p>Manipulation DOM, événements, ES6+</p>
+          <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
         </article>
         <article>
           <h3>Git & GitHub</h3>
           <p>Versioning, collaboration et gestion de projets.</p>
+          <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
         </article>
         <article>
           <h3>UI/UX</h3>
           <p>Interfaces propres et expérience utilisateur claire.</p>
+          <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h5>Portfolio</h5>
+      <h2>Mes projets</h2>
+      <div class="grid">
+        <article>
+          <img src="project1.jpg" alt="Projet 1">
+          <h3>Site E-commerce</h3>
+          <p>Plateforme de vente en ligne avec panier et paiement.</p>
+          <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
+        </article>
+        <article>
+          <img src="project3.jpg" alt="Projet 3">
+          <h3>Portfolio Personnel</h3>
+          <p>Site web responsive pour présenter mes travaux.</p>
+          <p><strong>Technologies :</strong> HTML, CSS, JS</p>
         </article>
       </div>
     </section>
@@ -66,21 +93,54 @@
     <section id="parcours">
       <h5>Parcours</h5>
       <h2>Mon chemin</h2>
-      <article>
-        <strong>2021</strong>
-        <h3>Baccalauréat Scientifique</h3>
-        <p>Obtention du baccalauréat avec spécialité scientifique, premier pas vers l'informatique.</p>
-      </article>
-      <article>
-        <strong>2026</strong>
-        <h3>L3 Informatique</h3>
-        <p>Troisième année d'informatique, initiation à l'algorithmique, aux langages et aux systèmes.</p>
-      </article>
-      <article>
-        <strong>2026</strong>
-        <h3>Formation Web</h3>
-        <p>Apprentissage du HTML, CSS, JavaScript et des bases du développement web.</p>
-      </article>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <strong>2025</strong>
+            <h3>Baccalauréat Scientifique</h3>
+            <p>Obtention du baccalauréat avec spécialité scientifique, premier pas vers l'informatique.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <strong>2026</strong>
+            <h3>L3 Informatique</h3>
+            <p>Troisième année d'informatique, initiation à l'algorithmique, aux langages et aux systèmes.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <strong>2026</strong>
+            <h3>Formation Web</h3>
+            <p>Apprentissage du HTML, CSS, JavaScript et des bases du développement web.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h5>Blog</h5>
+      <h2>Articles techniques</h2>
+      <div class="grid">
+        <article>
+          <h3>Introduction à HTML5</h3>
+          <p>Découvrez les nouvelles balises et fonctionnalités d'HTML5 pour des sites web modernes.</p>
+          <a href="#">Lire l'article</a>
+        </article>
+        <article>
+          <h3>CSS Flexbox expliqué</h3>
+          <p>Un guide complet pour maîtriser Flexbox et créer des layouts responsives.</p>
+          <a href="#">Lire l'article</a>
+        </article>
+        <article>
+          <h3>JavaScript ES6+</h3>
+          <p>Les nouvelles fonctionnalités de JavaScript pour écrire du code plus propre.</p>
+          <a href="#">Lire l'article</a>
+        </article>
+      </div>
     </section>
 
     <section id="contact">
@@ -92,10 +152,33 @@
         <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+        <label for="tel">Téléphone</label>
+      <input type="tel" id="tel" name="tel" placeholder="+237 698 43 83 89">
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Votre adresse">
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" placeholder="Bonjour Franck, je voulais..." required></textarea>
         <button type="submit">Envoyer le message</button>
       </form>
+    </section>
+
+    <section id="temoignages">
+      <h5>Témoignages</h5>
+      <h2>Ce qu'ils disent</h2>
+      <div class="grid">
+        <blockquote>
+          <p>"Franck est un développeur talentueux et passionné. Son travail sur notre projet a été impeccable."</p>
+          <cite>- Client 1</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Excellent collègue, toujours prêt à aider et à partager ses connaissances."</p>
+          <cite>- Collègue 1</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Ses compétences en front-end sont remarquables. Je recommande vivement."</p>
+          <cite>- Client 2</cite>
+        </blockquote>
+      </div>
     </section>
   </main>
 
