@@ -340,6 +340,14 @@ footer a {
   color: var(--primary);
 }
 
+.back-to-top {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   nav {
     padding: 1rem;

@@ -13,6 +13,17 @@ if (menuToggle && nav) {
   });
 }
 
+// Bouton retour en haut
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
 // Mode sombre/clair
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
