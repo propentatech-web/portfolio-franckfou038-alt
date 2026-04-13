@@ -13,21 +13,6 @@ if (menuToggle && nav) {
   });
 }
 
-// Animation de bienvenue
-const welcomeText = document.getElementById('welcome-text');
-const originalText = welcomeText.textContent;
-let index = 0;
-
-function typeWriter() {
-  if (index < originalText.length) {
-    welcomeText.textContent = originalText.substring(0, index + 1);
-    index++;
-    setTimeout(typeWriter, 50);
-  }
-}
-
-setTimeout(typeWriter, 1000);
-
 // Mode sombre/clair
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
